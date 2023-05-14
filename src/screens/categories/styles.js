@@ -12,5 +12,6 @@ export const styles = StyleSheet.create({
   title: {
     fontFamily: "Jakarta-Bold",
     fontSize: 20,
+    paddingVertical: 20,
   },
 });

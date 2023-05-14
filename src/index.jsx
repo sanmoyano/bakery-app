@@ -2,7 +2,7 @@ import { useFonts } from "expo-font";
 import { View, ActivityIndicator } from "react-native";
 
 import { theme } from "./constants";
-import { Categories } from "./screens/index";
+import Navigation from "./navigation";
 import { styles } from "./styles";
 
 export default function App() {
@@ -19,5 +19,5 @@ export default function App() {
       </View>
     );
   }
-  return <Categories />;
+  return <Navigation />;
 }

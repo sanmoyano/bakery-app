@@ -9,4 +9,9 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: theme.colors.third,
   },
+  title: {
+    fontFamily: "Jakarta-Bold",
+    fontSize: 20,
+    paddingVertical: 20,
+  },
 });
