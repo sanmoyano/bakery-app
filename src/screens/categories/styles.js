@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native/types";
+import { StyleSheet } from "react-native";
 
 import { theme } from "../../constants";
 
@@ -7,6 +7,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: theme.colors.white,
+    backgroundColor: theme.colors.primary,
+  },
+  title: {
+    fontFamily: "Jakarta-Bold",
+    fontSize: 20,
   },
 });
