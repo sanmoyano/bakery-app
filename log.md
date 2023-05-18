@@ -8,3 +8,6 @@ NOTAS:
   * Existe los "stack" o "pilas" son vistas que pueden estar asociadas a un componente. Uno puede tener una pila de elementos y un grupo de navegacion podemos tener diferentes stack de navegacion apilados o separadso segun el flujo que ha relacionado a tu aplicacion. Pila o stack de autenticacion - pila o stack que contenga las vistas que no pertenecen al flujo de autenticacion. De esa manera se comportan las pantallas y la navegacion en las app mobiles. 
 - navigation -> main -> idex.jsx -> se van apilar todos los stacks 
              -> index.jsx -> va ser el provider
+
+# 15/5/2023 -> Componentes & navegacion
+NOTAS: 
