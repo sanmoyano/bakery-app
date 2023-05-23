@@ -1,27 +1,23 @@
+import { theme } from "../theme/theme";
 export const CATEGORIES = [
   {
     id: 1,
     name: "Harinas Puras",
-    color: "#8FBFE0",
+    color: theme.colors.primary,
   },
   {
     id: 2,
     name: "Harinas Integrales",
-    color: "#7C77B9",
+    color: theme.colors.secondary,
   },
   {
     id: 3,
     name: "Harinas de Trigo",
-    color: "#1D8A99",
+    color: theme.colors.third,
   },
   {
     id: 4,
     name: "Harinas de Maíz",
-    color: "#0BC9CD",
-  },
-  {
-    id: 5,
-    name: "Harinas de Arroz",
-    color: "#14FFF7",
+    color: theme.colors.four,
   },
 ];
