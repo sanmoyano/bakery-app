@@ -1,1 +1,2 @@
-export { default as CategoryItem } from "./categoryItem/index";
+export { default as CategoryItem } from "./categoryItem";
+export { default as ProductItem } from "./productItem";
