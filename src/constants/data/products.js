@@ -6,6 +6,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de molde de masa madre",
     weight: "300gr",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de Yema de masa madre",
     weight: "150gr",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de molde integral masa madre",
     weight: "450gr",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de Yema integral de masa madre",
     weight: "250gr",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de molde de trigo de masa madre",
     weight: "450gr",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de Yema de trigo de masa madre",
     weight: "250gr",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de molde de maíz de masa madre",
     weight: "450gr",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80",
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de Yema de maíz de masa madre",
     weight: "250gr",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80",
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de molde de arroz de masa madre",
     weight: "450gr",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80",
   },
   {
     id: 10,
@@ -78,5 +87,6 @@ export const PRODUCTS = [
     price: 1.5,
     description: "Pan de Yema de arroz de masa madre",
     weight: "250gr",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80",
   },
 ];

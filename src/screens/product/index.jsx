@@ -1,18 +1,25 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, Image } from "react-native";
 
 import { styles } from "./styles";
-import { theme } from "../../constants";
+import { PRODUCTS, theme } from "../../constants";
 
-const Product = ({ navigation }) => {
+const Product = ({ route }) => {
+  const { productId } = route.params;
+  const product = PRODUCTS.find((product) => product.id === productId);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Product Detail</Text>
-      <Button
-        title="Back Categories"
-        color={theme.colors.black}
-        onPress={() => navigation.navigate("Categories")}
-      />
+      <Text style={styles.description}>{product.description}</Text>
+      <View style={styles.imgContainer}>
+        <Image style={styles.img} source={{ uri: product.img }} resizeMode="cover" />
+        <View style={styles.priceContainer}>
+          <Text style={styles.price}>${product.price}</Text>
+        </View>
+      </View>
+      <View style={styles.infoContainer}>
+        <Text style={styles.weight}>{product.weight}</Text>
+      </View>
     </View>
   );
 };
