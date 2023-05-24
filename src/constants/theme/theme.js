@@ -7,6 +7,6 @@ export const theme = {
     third: "#DEEBFF",
     four: "#C0AFE4",
     text: "#11131E",
-    transparent: "rgba(0,0,0,0.1)",
+    transparent: "rgba(0,0,0,0.2)",
   },
 };
