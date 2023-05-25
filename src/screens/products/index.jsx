@@ -6,7 +6,7 @@ import ProductItem from "../../components/productItem";
 import { PRODUCTS } from "../../constants";
 
 const Products = ({ navigation, route }) => {
-  const { categoryId } = route.params;
+  const { categoryId, color } = route.params;
 
   const filteredProducts = PRODUCTS?.filter((product) => product.category === categoryId);
 
@@ -14,10 +14,13 @@ const Products = ({ navigation, route }) => {
     navigation.navigate("Product", {
       productId: item.id,
       name: item.name,
+      color,
     });
   };
 
-  const renderItem = ({ item }) => <ProductItem item={item} onSelected={onSelected} />;
+  const renderItem = ({ item }) => (
+    <ProductItem color={color} item={item} onSelected={onSelected} />
+  );
   const keyExtractor = (item) => item.id.toString();
 
   return (

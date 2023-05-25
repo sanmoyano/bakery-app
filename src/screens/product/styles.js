@@ -5,11 +5,11 @@ import { theme } from "../../constants";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: "center",
     alignItems: "center",
     gap: 50,
-    marginHorizontal: 20,
-    marginVertical: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 20,
+    backgroundColor: theme.colors.white,
   },
   description: {
     fontSize: 30,
@@ -21,7 +21,6 @@ export const styles = StyleSheet.create({
     position: "relative",
     width: 300,
     height: 300,
-    backgroundColor: theme.colors.third,
     borderRadius: 50,
     justifyContent: "center",
     alignItems: "center",

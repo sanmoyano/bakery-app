@@ -15,7 +15,7 @@ export default function App() {
   if (!loaded) {
     return (
       <View style={styles.container}>
-        <ActivityIndicator size="large" color={theme.colors.pr} />
+        <ActivityIndicator size="large" color={theme.colors.primary} />
       </View>
     );
   }

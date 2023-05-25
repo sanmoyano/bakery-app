@@ -3,11 +3,11 @@ import { View, TouchableOpacity, Text, Image } from "react-native";
 
 import { styles } from "./style";
 
-const ProductItem = ({ item, onSelected }) => {
+const ProductItem = ({ item, onSelected, color }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => onSelected(item)} style={styles.touchableContainer}>
-        <View style={styles.imgContainer}>
+        <View style={{ ...styles.imgContainer, backgroundColor: color }}>
           <Image resizeMode="cover" source={{ uri: item.img }} style={styles.img} />
         </View>
         <View style={styles.infoContainerNameWeight}>

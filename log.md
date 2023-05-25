@@ -39,3 +39,9 @@ NOTAS:
   * nombre.reducer.js (convencion)
 2. acciones -> nombre.action.js
 3. types -> diccionario de strings. Va ser un objeto con los tipos. 
+
+# 24/5/2023 -> HTTP y FIREBASE
+NOTAS: 
+- firebase data base : https://bakery-app-b898d-default-rtdb.firebaseio.com/
+- CRUD -> Create, Read, Update, Delete. 
+- 

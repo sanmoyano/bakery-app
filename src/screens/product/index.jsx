@@ -2,16 +2,16 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 
 import { styles } from "./styles";
-import { PRODUCTS, theme } from "../../constants";
+import { PRODUCTS } from "../../constants";
 
 const Product = ({ route }) => {
-  const { productId } = route.params;
+  const { productId, color } = route.params;
   const product = PRODUCTS.find((product) => product.id === productId);
 
   return (
     <View style={styles.container}>
       <Text style={styles.description}>{product.description}</Text>
-      <View style={styles.imgContainer}>
+      <View style={{ ...styles.imgContainer, backgroundColor: color }}>
         <Image style={styles.img} source={{ uri: product.img }} resizeMode="cover" />
         <View style={styles.priceContainer}>
           <Text style={styles.price}>${product.price}</Text>

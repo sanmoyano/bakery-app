@@ -18,7 +18,6 @@ export const styles = StyleSheet.create({
     width: "100%",
   },
   imgContainer: {
-    backgroundColor: theme.colors.primary,
     width: 80,
     height: 80,
     justifyContent: "center",
