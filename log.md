@@ -22,7 +22,7 @@ NOTAS:
   * El contextApi necesita menos tiemo para cargar los recursos. 
   * la idea es no tener muchos contextos, cuando una aplicacion crece mucho, el context puede ser un problema de performance. 
   * Si el proyecto necesita resolver el prop drilling, el contextApi es una opcion. 
-  * el contextApi solo se utiliza para gestionar y compartir datos de forma global o parcial siempre y cuando esos datos no tengan que actualizarse constantemente.
+  * el contextApi solo se utiliza para gestionar y compartir datos de forma global o parcial siempre y cuando esos datos no tengan que actualizarse constantemente. Los valores o esos datos deben ser lo mas estatico posible. 
   * mantenibilidad sencilla para proyctos chicos y que los valores sean lo mas estaticos posibles. 
 - Redux -> complejo, hay que saber muchos conceptos.
   * Deberia haber muy pocos datos para la carga inicial de la app, para setear los datos iniciales. 

@@ -1,25 +1,25 @@
 import React from "react";
 import { FlatList, SafeAreaView } from "react-native";
+import { useSelector } from "react-redux";
 
 import { styles } from "./styles";
 import ProductItem from "../../components/productItem";
 import { PRODUCTS } from "../../constants";
 
 const Products = ({ navigation, route }) => {
-  const { categoryId, color } = route.params;
+  const category = useSelector((state) => state.categories.selected);
 
-  const filteredProducts = PRODUCTS?.filter((product) => product.category === categoryId);
+  const filteredProducts = PRODUCTS?.filter((product) => product.category === category.id);
 
   const onSelected = (item) => {
     navigation.navigate("Product", {
       productId: item.id,
       name: item.name,
-      color,
     });
   };
 
   const renderItem = ({ item }) => (
-    <ProductItem color={color} item={item} onSelected={onSelected} />
+    <ProductItem color={category.color} item={item} onSelected={onSelected} />
   );
   const keyExtractor = (item) => item.id.toString();
 
