@@ -17,7 +17,7 @@ NOTAS:
 - Libreria agnostica -> se puede implementar en puro javascript o en lo que sea, mientras contenga JS, puede implementar en lo que sea. 
 - Manejar de los estados de forma consistente, predictiva e inmutable. 
 - Gestiona el estado de manera centralizada.
-- Context vs Redux -> 
+- Context -> 
   * el contexto lo que viene a solucionar es el prop drilling. Encierrra todos los componentes que necesitan acceder a una propiedad. 
   * El contextApi necesita menos tiemo para cargar los recursos. 
   * la idea es no tener muchos contextos, cuando una aplicacion crece mucho, el context puede ser un problema de performance. 
