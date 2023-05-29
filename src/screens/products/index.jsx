@@ -1,22 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FlatList, SafeAreaView } from "react-native";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import { styles } from "./styles";
 import ProductItem from "../../components/productItem";
-import { PRODUCTS } from "../../constants";
+import { filterProducts, selectProduct } from "../../store/actions";
 
 const Products = ({ navigation, route }) => {
+  const dispatch = useDispatch();
   const category = useSelector((state) => state.categories.selected);
-
-  const filteredProducts = PRODUCTS?.filter((product) => product.category === category.id);
+  const filteredProducts = useSelector((state) => state.products.filteredProducts);
 
   const onSelected = (item) => {
+    dispatch(selectProduct(item.id));
     navigation.navigate("Product", {
-      productId: item.id,
       name: item.name,
+      color: category.color,
     });
   };
+
+  useEffect(() => {
+    dispatch(filterProducts(category.id));
+  }, []);
 
   const renderItem = ({ item }) => (
     <ProductItem color={category.color} item={item} onSelected={onSelected} />
