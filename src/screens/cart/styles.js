@@ -16,7 +16,6 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   buttonConfirm: {
-    backgroundColor: theme.colors.transparent,
     borderRadius: 100,
     paddingHorizontal: 25,
     paddingVertical: 15,
@@ -25,9 +24,10 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   confirmText: {
-    color: theme.colors.text,
+    color: theme.colors.white,
     fontFamily: "Jakarta-Bold",
-    fontSize: 18,
+    fontSize: 20,
+    textAlign: "center",
   },
   totalContainer: {
     flex: 0.5,
@@ -44,5 +44,22 @@ export const styles = StyleSheet.create({
     color: theme.colors.text,
     fontFamily: "Jakarta-Bold",
     fontSize: 16,
+  },
+  button: {
+    backgroundColor: theme.colors.black,
+    height: 50,
+    width: 150,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 20,
+  },
+  disabled: {
+    backgroundColor: theme.colors.black,
+    opacity: 0.5,
+    height: 50,
+    width: 150,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 20,
   },
 });
