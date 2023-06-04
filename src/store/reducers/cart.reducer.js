@@ -30,6 +30,21 @@ const cartReducer = (state = initialState, action) => {
         total: sumTotal(updatedCart),
       };
     }
+    case REMOVE_FROM_CART: {
+      const filteredCart = state.data.filter((item) => item.id !== action.id);
+      return {
+        ...state,
+        data: filteredCart,
+        total: sumTotal(filteredCart),
+      };
+    }
+    case CONFIRM_ORDER: {
+      return {
+        ...state,
+        data: [],
+        total: 0,
+      };
+    }
     default:
       return state;
   }
