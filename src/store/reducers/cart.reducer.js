@@ -1,4 +1,3 @@
-import { CART } from "../../constants/";
 import { sumTotal } from "../../utils/functions";
 import { carTypes } from "../types/cart.types";
 
