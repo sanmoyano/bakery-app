@@ -1,17 +1,28 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, TouchableOpacity } from "react-native";
+import { useDispatch } from "react-redux";
 
 import { styles } from "./styles";
 import { theme } from "../../constants";
+import { signUp, signIn } from "../../store/actions/auth.action";
 
 const Auth = () => {
+  const dispatch = useDispatch();
   const [isLogin, setIsLogin] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const title = isLogin ? "Login" : "Register";
   const buttonTitle = isLogin ? "Login" : "Register";
   const messageText = isLogin ? "Don't have an account?" : "Already have an account";
 
   const onHandleOnchageAuth = () => {
     setIsLogin(!isLogin);
+  };
+
+  const onHandlerAuth = () => {
+    console.warn("hola desde la funcion");
+    dispatch(isLogin ? signIn({ email, password }) : signUp({ email, password }));
   };
 
   return (
@@ -25,7 +36,8 @@ const Auth = () => {
           placeholderTextColor={theme.colors.transparent}
           autoCapitalize="none"
           autoCorrect={false}
-          onChange={() => null}
+          onChangeText={(text) => setEmail(text)}
+          value={email}
         />
         <Text style={styles.label}>Password</Text>
         <TextInput
@@ -33,8 +45,10 @@ const Auth = () => {
           placeholder="*******"
           placeholderTextColor={theme.colors.transparent}
           autoCapitalize="none"
+          secureTextEntry
           autoCorrect={false}
-          onChange={() => null}
+          onChangeText={(text) => setPassword(text)}
+          value={password}
         />
         <View style={styles.linkContainer}>
           <TouchableOpacity style={styles.link} onPress={onHandleOnchageAuth}>
@@ -42,7 +56,7 @@ const Auth = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.submit}>
-          <Button title={buttonTitle} onPress={() => null} />
+          <Button title={buttonTitle} onPress={onHandlerAuth} />
         </View>
       </View>
     </View>
