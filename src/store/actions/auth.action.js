@@ -22,7 +22,6 @@ export const signUp = ({ email, password }) => {
       }
 
       const data = await response.json();
-      console.warn(data);
 
       dispatch({
         type: SIGN_UP,
@@ -36,5 +35,29 @@ export const signUp = ({ email, password }) => {
 };
 
 export const signIn = ({ email, password }) => {
-  console.log("signIn");
+  return async (dispatch) => {
+    try {
+      const res = await fetch(URL_FIREBASE_AUTH_SIGN_IN, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+          returnSecureToken: true,
+        }),
+      });
+
+      const data = await res.json();
+
+      dispatch({
+        type: SIGN_IN,
+        token: data.idToken,
+        userId: data.localId,
+      });
+    } catch (err) {
+      throw err;
+    }
+  };
 };

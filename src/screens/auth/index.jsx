@@ -21,7 +21,6 @@ const Auth = () => {
   };
 
   const onHandlerAuth = () => {
-    console.warn("hola desde la funcion");
     dispatch(isLogin ? signIn({ email, password }) : signUp({ email, password }));
   };
 
@@ -62,5 +61,4 @@ const Auth = () => {
     </View>
   );
 };
-
 export default Auth;
