@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
   errorContainer: {},
   errorMessage: {
     fontSize: 12,
-    fontFamily: "Jakarta_Regular",
+    fontFamily: "Jakarta-Regular",
     paddingVertical: 5,
     color: "red",
   },

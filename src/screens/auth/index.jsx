@@ -1,18 +1,41 @@
-import React, { useState } from "react";
-import { View, Text, TextInput, Button, TouchableOpacity } from "react-native";
+import React, { useReducer, useState } from "react";
+import { View, Text, Button, TouchableOpacity } from "react-native";
 import { useDispatch } from "react-redux";
 
 import { styles } from "./styles";
 import Input from "../../components/input";
 import { theme } from "../../constants";
 import { signUp, signIn } from "../../store/actions/auth.action";
+import { UPDATE_FORM, onInputChange } from "../../utils/form";
+
+const initialState = {
+  email: { value: "", error: "", touched: false, hasError: true },
+  password: { value: "", error: "", touched: false, hasError: true },
+  isFormValid: false,
+};
+
+const formReducer = (state, action) => {
+  switch (action.type) {
+    case UPDATE_FORM:
+      const { name, value, hasError, error, touched, isFormValid } = action.data;
+      return {
+        ...state,
+        [name]: {
+          ...state[name],
+          value,
+          hasError,
+          error,
+          touched,
+        },
+        isFormValid,
+      };
+  }
+};
 
 const Auth = () => {
   const dispatch = useDispatch();
   const [isLogin, setIsLogin] = useState(true);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
+  const [formState, dispatchFormState] = useReducer(formReducer, initialState);
   const title = isLogin ? "Login" : "Register";
   const buttonTitle = isLogin ? "Login" : "Register";
   const messageText = isLogin ? "Don't have an account?" : "Already have an account";
@@ -22,7 +45,15 @@ const Auth = () => {
   };
 
   const onHandlerAuth = () => {
-    dispatch(isLogin ? signIn({ email, password }) : signUp({ email, password }));
+    dispatch(
+      isLogin
+        ? signIn({ email: formState.email.value, password: formState.password.value })
+        : signUp({ email: formState.email.value, password: formState.password.value })
+    );
+  };
+
+  const onHadleInputChange = ({ value, name }) => {
+    onInputChange({ name, value, dispatch: dispatchFormState, formState });
   };
 
   return (
@@ -34,12 +65,12 @@ const Auth = () => {
           placeholderTextColor={theme.colors.transparent}
           autoCapitalize="none"
           autoCorrect={false}
-          onChangeText={(text) => setEmail(text)}
-          value={email}
+          onChangeText={(text) => onHadleInputChange({ value: text, name: "email" })}
+          value={formState.email.value}
           label="Email"
-          error="Email is invalid"
-          touched
-          hasError
+          error={formState.email.error}
+          touched={formState.email.touched}
+          hasError={formState.email.hasError}
         />
         <Input
           placeholder="*******"
@@ -47,12 +78,12 @@ const Auth = () => {
           autoCapitalize="none"
           secureTextEntry
           autoCorrect={false}
-          onChangeText={(text) => setPassword(text)}
-          value={password}
+          onChangeText={(text) => onHadleInputChange({ value: text, name: "password" })}
+          value={formState.password.value}
           label="Password"
-          error="Password is invalid"
-          touched
-          hasError
+          error={formState.password.error}
+          touched={formState.password.touched}
+          hasError={formState.password.hasError}
         />
         <View style={styles.linkContainer}>
           <TouchableOpacity style={styles.link} onPress={onHandleOnchageAuth}>
@@ -60,7 +91,7 @@ const Auth = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.submit}>
-          <Button title={buttonTitle} onPress={onHandlerAuth} />
+          <Button title={buttonTitle} disabled={!formState.isFormValid} onPress={onHandlerAuth} />
         </View>
       </View>
     </View>
