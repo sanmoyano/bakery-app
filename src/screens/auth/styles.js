@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.white,
   },
   content: {
+    minHeight: 340,
     width: "80%",
     maxWidth: 400,
     padding: 15,
@@ -32,19 +33,6 @@ export const styles = StyleSheet.create({
     fontFamily: "Jakarta-Bold",
     fontSize: 16,
     textAlign: "center",
-  },
-  label: {
-    fontSize: 14,
-    fontFamily: "Jakarta-Regular",
-    paddingVertical: 8,
-  },
-  input: {
-    height: 45,
-    borderBottomColor: theme.colors.four,
-    borderBottomWidth: 1,
-    marginBottom: 5,
-    width: "90%",
-    fontFamily: "Jakarta-Regular",
   },
   linkContainer: {
     justifyContent: "center",
