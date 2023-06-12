@@ -6,7 +6,7 @@ import { styles } from "./styles";
 import { CartItem } from "../../components";
 import { confirmOrder, removeFromCart } from "../../store/actions";
 
-const Cart = () => {
+const Cart = ({ route }) => {
   const dispatch = useDispatch();
   const total = useSelector((state) => state.cart.total);
   const cart = useSelector((state) => state.cart.data);
@@ -20,6 +20,7 @@ const Cart = () => {
   const onConfirmOrder = () => {
     dispatch(confirmOrder({ cart, total }));
   };
+
   const renderItem = ({ item }) => <CartItem item={item} onRemove={onRemove} />;
   const keyExtractor = (item) => item.id.toString();
   return (
@@ -31,16 +32,16 @@ const Cart = () => {
         keyExtractor={keyExtractor}
       />
       <View style={styles.footerContainer}>
+        <View style={styles.totalContainer}>
+          <Text style={styles.totalText}>Total amount:</Text>
+          <Text style={styles.totalPrice}>${total}</Text>
+        </View>
         <TouchableOpacity
           disabled={isCartEmpty}
           onPress={onConfirmOrder}
           style={styles.buttonConfirm}>
           <View style={isCartEmpty ? styles.disabled : styles.button}>
-            <Text style={styles.confirmText}>Confirm</Text>
-          </View>
-          <View style={styles.totalContainer}>
-            <Text style={styles.totalText}>Total:</Text>
-            <Text style={styles.totalPrice}>${total}</Text>
+            <Text style={styles.confirmText}>Pay</Text>
           </View>
         </TouchableOpacity>
       </View>

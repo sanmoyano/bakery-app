@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TouchableOpacity, Text } from "react-native";
+import { View, TouchableOpacity, Text, Image } from "react-native";
 
 import { styles } from "./styles";
 
@@ -11,6 +11,9 @@ const CategoryItem = ({ item, onSelected }) => {
         onPress={() => onSelected(item)}>
         <View>
           <Text style={styles.name}>{item.name}</Text>
+        </View>
+        <View style={styles.imgContainer}>
+          <Image resizeMode="cover" source={{ uri: item.img }} style={styles.img} />
         </View>
       </TouchableOpacity>
     </View>

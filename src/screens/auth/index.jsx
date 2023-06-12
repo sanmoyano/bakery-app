@@ -17,7 +17,7 @@ const initialState = {
 const formReducer = (state, action) => {
   switch (action.type) {
     case UPDATE_FORM:
-      const { name, value, hasError, error, touched, isFormValid } = action.data;
+      const { name, value, hasError, error, touched, isFormValid } = action.data; /*eslint-disable-line*/
       return {
         ...state,
         [name]: {

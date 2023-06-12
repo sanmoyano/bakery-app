@@ -6,16 +6,16 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    gap: 50,
+    gap: 20,
     paddingHorizontal: 20,
-    paddingVertical: 20,
+    // paddingVertical: 20,
     backgroundColor: theme.colors.white,
   },
   description: {
-    fontSize: 30,
+    fontSize: 28,
     color: theme.colors.text,
     fontFamily: "Jakarta-Bold",
-    width: "70%",
+    width: "80%",
   },
   imgContainer: {
     position: "relative",
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  img: { height: 250, width: 250, borderRadius: 50 / 1.618 },
+  img: { height: 300, width: 300, borderRadius: 50 / 1.618 },
   priceContainer: {
     position: "absolute",
     right: -20,
@@ -36,6 +36,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 100,
+    flexDirection: "row",
   },
   price: {
     fontSize: 18,
@@ -47,13 +48,18 @@ export const styles = StyleSheet.create({
     width: 150,
     height: 70,
     justifyContent: "center",
-    alignItems: "center",
+    // alignItems: "center",
     borderRadius: 100,
+    paddingLeft: 30,
   },
   weight: {
     fontSize: 18,
     fontFamily: "Jakarta-Bold",
     color: theme.colors.text,
-    opacity: 0.5,
+  },
+  labelContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 2,
   },
 });

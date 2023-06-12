@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginHorizontal: 20,
-    marginVertical: 10,
+    // marginVertical: 10,
     height: 140,
   },
   touchableContainer: {
@@ -33,6 +33,8 @@ export const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "center",
+    // marginLeft: 10,
+    width: "50%",
   },
   name: {
     fontSize: 20,

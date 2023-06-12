@@ -15,13 +15,15 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.22,
     shadowRadius: 1.41,
 
+    justifyContent: "space-between",
+    alignItems: "center",
     elevation: 3,
     margin: 10,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 12,
+    flexDirection: "row",
   },
-  headerContainer: {},
   header: {
     fontSize: 16,
     fontFamily: "Jakarta-Bold",
@@ -49,5 +51,17 @@ export const styles = StyleSheet.create({
     fontFamily: "Jakarta-Bold",
     color: theme.colors.text,
     marginBottom: 5,
+  },
+  imgContainer: {
+    width: 80,
+    height: 80,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 14,
+  },
+  img: {
+    height: 65,
+    width: 65,
+    borderRadius: 14 / 1.618,
   },
 });
