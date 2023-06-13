@@ -17,12 +17,18 @@ const TabNavigator = () => {
       initialRouteName="ShopTab"
       screenOptions={{
         headerShown: false,
+        tabBarStyle: {
+          backgroundColor: theme.colors.black,
+          height: 80,
+          paddingTop: 10,
+          paddingBottom: 10,
+        },
         tabBarLabelStyle: {
           fontFamily: "Jakarta-Bold",
           fontSize: 16,
         },
-        tabBarActiveTintColor: theme.colors.black,
-        tabBarInactiveTintColor: theme.colors.transparent,
+        tabBarActiveTintColor: theme.colors.primary,
+        tabBarInactiveTintColor: theme.colors.white,
       }}>
       <BottomTab.Screen
         name="ShopTab"

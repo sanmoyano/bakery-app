@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     gap: 20,
     paddingHorizontal: 20,
-    // paddingVertical: 20,
+    paddingVertical: 20,
     backgroundColor: theme.colors.white,
   },
   description: {
