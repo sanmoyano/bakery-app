@@ -19,7 +19,7 @@ const TabNavigator = () => {
         headerShown: false,
         tabBarStyle: {
           backgroundColor: theme.colors.black,
-          height: 80,
+          height: 90,
           paddingTop: 10,
           paddingBottom: 10,
         },
